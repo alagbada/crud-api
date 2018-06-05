@@ -1,0 +1,28 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www",
+    "dev": "nodemon",
+    "test": "(dropdb --if-exists --username=postgres test-webstore && createdb --username=postgres test-webstore) && cross-env NODE_ENV=test mocha"
+  },
+  "dependencies": {
+    "cookie-parser": "~1.4.3",
+    "cross-env": "^5.1.6",
+    "cross-spawn": "^6.0.5",
+    "debug": "~2.6.9",
+    "express": "~4.16.0",
+    "gitignore": "^0.6.0",
+    "http-errors": "~1.6.2",
+    "knex": "^0.14.6",
+    "morgan": "~1.9.0",
+    "pg": "^7.4.3"
+  },
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "mocha": "^5.2.0",
+    "nodemon": "^1.17.5",
+    "supertest": "^3.1.0"
+  }
+}
